@@ -15,7 +15,9 @@ Candice
 I passed in the prefix for the specific trainer's page, called trainer_path(damaged_pokemon.trainer) where I specified the trainer id in the parenthesis to get the trainer whose pokemon I was damaging. That path needed a specific trainer id to go to.
 
 # Question 5: Explain how putting this line "flash[:error] = @pokemon.errors.full_messages.to_sentence" shows error messages on your form.
+https://github.com/candiceye/proj1try2.git
 
 # Give us feedback on the project and decal below!
+It's been great conceptually so far, I would just say some help with syntax/reference examples would be super useful for many of us! The staff have all been super kind and supportive too. I think the first homework was a bit difficult to grasp without much knowledge of ruby on rails syntax, but this project was really great in terms of helping us understand concepts, implemented. :) Keep it up y'all!
 
 # Extra credit: Link your Heroku deployed app
