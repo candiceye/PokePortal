@@ -1,5 +1,8 @@
 class PokemonsController < ApplicationController
 
+	validates :name, uniqueness: true, presence: { message: "Give pokemon a name."}
+
+
   def index
     @pokemons = Pokemon.all
   end
@@ -26,8 +29,11 @@ class PokemonsController < ApplicationController
   end
 
   def create
-  	new_pokemon = Pokemon.create(name: params[:name],level: 1,ndex: params[:ndex],health: 100)
+  	new_pokemon = Pokemon.create(name: params[:name],level: 1,ndex: params[:ndex], health: 100)
+  	new_pokemon.trainer = current_trainer
   	new_pokemon.update!(submit_params)
+  	new_pokemon.save
+  	redirect_to trainer_path(current_trainer)
   end
 
   def submit_params
